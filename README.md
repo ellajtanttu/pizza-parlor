@@ -187,3 +187,15 @@ Order of events:
   _Expected Result:_
 
       < 22
+---
+  _Test:_ "It should return Pizza.price of 26 when pizzaPrice() is run on a Pizza object with size === 'Large'."\
+  _Code:_
+
+      let testPizza = new Pizza();
+      testPizza.size = "Large";
+      testPizza.pizzaPrice();
+      testPizza.price;
+
+  _Expected Result:_
+
+      < 26

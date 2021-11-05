@@ -11,17 +11,9 @@ Pizza.prototype.pizzaPrice = function() {
     this.price += 16;
   } else if (this.size === "Medium") {
     this.price += 22;
+  } else {
+    this.price += 26;
   }
 
   return this.price;
 }
-
-
-
-// if (this.size === "Small") {
-//   this.price += 16;
-// } else if (this.size === "Medium") {
-//   this.price += 22;
-// } else {
-//   this.price += 26;
-// }
