@@ -28,6 +28,10 @@ Pizza.prototype.pizzaPrice = function() {
         toppingPrice += 1;
         console.log("Anch: Topping price is " + toppingPrice);
         break;
+      case ("Garlic"):
+        toppingPrice += 2;
+        console.log("Garlic: Topping price is " + toppingPrice);
+        break;
       default:
         break;
     }
