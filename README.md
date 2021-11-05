@@ -94,11 +94,11 @@ Order of events:
       }
 
     Pizza.prototype.pizzaPrice = function() {
-    pizzaPrice = 0;
+        pizzaPrice = 0;
 
         if (this.size === "Small") {
             pizzaPrice += 16;
-        } else if (this.size === "Medium") { 
+        } else if (this.size === "Medium") {
             pizzaPrice += 22;
         } else {
             pizzaPrice += 26;
@@ -123,20 +123,21 @@ Order of events:
         }
 
         return pizzaPrice;
-    })
+    });
 
     }
 
 ---
 # TDD
 
-### **_Describe:_**
+### **_Describe: Pizza(size, toppings)_**
 
-  _Test:_ "It should... "\
+  _Test:_ "It should return a pizza object when a new pizza variable is created."\
   _Code:_
 
-      code block
+      let testPizza = new Pizza();
+      testPizza;
 
   _Expected Result:_
 
-      < code block return
+      < Pizza {size: undefined, toppings: undefined}
