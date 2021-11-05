@@ -6,7 +6,6 @@ function Pizza(size, toppings, price) {
 
 Pizza.prototype.pizzaPrice = function() {
   this.price = 0;
-  console.log("1. this.price is " + this.price);
   if (this.size === "Small") {
     this.price += 16;
   } else if (this.size === "Medium") {
@@ -15,16 +14,20 @@ Pizza.prototype.pizzaPrice = function() {
     this.price += 26;
   }
 
-  console.log("2. this.price is " + this.price);
+  console.log("Pre loop: this.price is " + this.price);
     let toppingPrice = 0;
-    console.log("1. topping price is " + toppingPrice);
 
     this.toppings.forEach(function(topping) {
 
     switch (topping) {
       case ("Pepperoni"):
         toppingPrice += 1;
-        console.log("2. topping price is " + toppingPrice);
+        console.log("Pepp: Topping price is " + toppingPrice);
+        break;
+      case ("Anchovies"):
+        toppingPrice += 1;
+        console.log("Anch: Topping price is " + toppingPrice);
+        break;
       default:
         break;
     }

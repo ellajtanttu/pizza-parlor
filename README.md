@@ -200,7 +200,7 @@ Order of events:
 
       < 26
 ---
-  _Test:_ "It should return Pizza.price of 17 when pizzaPrice() is run on a Pizza object with size === 'Small' and topping === ["pepperoni"]."\
+  _Test:_ "It should return Pizza.price of 17 when pizzaPrice() is run on a Pizza object with size === 'Small' and topping === ["Pepperoni"]."\
   _Code:_
 
       let testPizza = new Pizza("Small", ["Pepperoni"], 0);
@@ -210,3 +210,14 @@ Order of events:
   _Expected Result:_
 
       < 17
+---
+  _Test:_ "It should return Pizza.price of 18 when pizzaPrice() is run on a Pizza object with size === 'Small' and topping === ["Pepperoni","Anchovies"]."\
+  _Code:_
+
+      let testPizza = new Pizza("Small", ["Pepperoni","Anchovies"], 0);
+      testPizza.pizzaPrice();
+      testPizza.price;
+
+  _Expected Result:_
+
+      < 18
