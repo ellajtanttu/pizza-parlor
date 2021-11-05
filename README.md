@@ -141,3 +141,13 @@ Order of events:
   _Expected Result:_
 
       < Pizza {size: undefined, toppings: undefined}
+
+  _Test:_ "It should return a pizza object with defined properties if variable is declared with properties"\
+  _Code:_
+
+      let testPizza = new Pizza("Small", ["Pepperoni", "Anchovies", "Mushrooms"]);
+      testPizza;
+
+  _Expected Result:_
+
+      < Pizza {size: "Small", toppings:  ["Pepperoni", "Anchovies", "Mushrooms"]}
