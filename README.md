@@ -91,47 +91,47 @@ Order of events:
       function Pizza(size, toppings) {
           this.size = size;
           this.toppings = toppings;
+          this.price = price;
       }
 
     Pizza.prototype.pizzaPrice = function() {
-        pizzaPrice = 0;
+        this.price = 0;
 
         if (this.size === "Small") {
-            pizzaPrice += 16;
+            this.price += 16;
         } else if (this.size === "Medium") {
-            pizzaPrice += 22;
+            this.price += 22;
         } else {
-            pizzaPrice += 26;
+            this.price += 26;
         }
 
-    this.toppings.forEach(function(topping) {
-        switch (topping) {
-            case ("Pepperoni"):
-                pizzaPrice += 1;
-            case ("Anchovies"):
-                pizzaPrice += 1;
-            case ("Garlic"):
-                pizzaPrice += 2;
-            case ("Onions"):
-                pizzaPrice += 1;
-            case ("Mushrooms"):
-                pizzaPrice += 2;
-            case ("Artichoke Hearts"):
-                pizzaPrice += 3;
-            default:
-                break;
-        }
-
-        return pizzaPrice;
-    });
-
+        this.toppings.forEach(function(topping) {
+            switch (topping) {
+                case ("Pepperoni"):
+                    this.price += 1;
+                case ("Anchovies"):
+                    this.price += 1;
+                case ("Garlic"):
+                    this.price += 2;
+                case ("Onions"):
+                    this.price += 1;
+                case ("Mushrooms"):
+                    this.price += 2;
+                case ("Artichoke Hearts"):
+                    this.price += 3;
+                default:
+                    return this.price;
+                    break;
+            }
+        });
+        return this.price;
     }
 
 ---
 # TDD
 
 ### **_Describe: Pizza(size, toppings)_**
-
+---
   _Test:_ "It should return a pizza object when a new pizza variable is created."\
   _Code:_
 
@@ -141,7 +141,7 @@ Order of events:
   _Expected Result:_
 
       < Pizza {size: undefined, toppings: undefined}
-
+---
   _Test:_ "It should return a pizza object with defined properties if variable is declared with properties"\
   _Code:_
 
@@ -151,3 +151,26 @@ Order of events:
   _Expected Result:_
 
       < Pizza {size: "Small", toppings:  ["Pepperoni", "Anchovies", "Mushrooms"]}
+---
+  _Test:_ "It should return a pizza object with a price property when a new object is created"\
+  _Code:_
+
+      let testPizza = new Pizza();
+      testPizza;
+
+  _Expected Result:_
+
+      < Pizza {size: undefined, toppings: undefined, price: undefined}
+
+<!-- ---
+### **_Describe: Pizza.prototype.pizzaPrice()_**
+---
+  _Test:_ "It should return a pizza object when a new pizza variable is created."\
+  _Code:_
+
+      let testPizza = new Pizza();
+      testPizza;
+
+  _Expected Result:_
+
+      < Pizza {size: undefined, toppings: undefined} -->
