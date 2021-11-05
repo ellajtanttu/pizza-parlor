@@ -176,14 +176,14 @@ Order of events:
 
       < 0
 ---
-  _Test:_ "It should return Pizza.price of 16 when pizzaPrice() is run on a Pizza object with size === 'Small'."\
+  _Test:_ "It should return Pizza.price of 22 when pizzaPrice() is run on a Pizza object with size === 'Medium'."\
   _Code:_
 
       let testPizza = new Pizza();
-      testPizza.size = "Small";
+      testPizza.size = "Medium";
       testPizza.pizzaPrice();
       testPizza.price;
 
   _Expected Result:_
 
-      < 16
+      < 22
