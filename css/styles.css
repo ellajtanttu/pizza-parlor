@@ -69,7 +69,6 @@ button {
 
 #itemizedSelections {
   text-align: center;
-  line-height: 40%;
   margin-top: 25px;
   margin-bottom: 25px;
   margin-left: auto;
@@ -77,3 +76,6 @@ button {
   width: 50%;
 }
 
+#addPeppRec, #addAnchRec, #addGarRec, #addOnionRec, #addMushRec, #addArtRec {
+  display: none;
+}

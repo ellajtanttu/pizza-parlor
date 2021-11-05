@@ -1,3 +1,5 @@
+// Business Logic:
+
 function Pizza(size, toppings, price) {
   this.size = size;
   this.toppings = toppings;
@@ -52,24 +54,50 @@ Pizza.prototype.pizzaPrice = function() {
   return this.price += toppingPrice;
 }
 
+// User Interface Logic:
 
+$(document).ready(function() {
+  $("#orderForm").submit(function(event) {
+    event.preventDefault();
+    $("#receipt").show();
+    const inputPieSize = $("input:radio[name=inlineRadioOptions]:checked").val();
+    console.log("inputPieSize is " + inputPieSize);
 
-// this.toppings.forEach(function(topping) {
-//   switch (topping) {
-//       case ("Pepperoni"):
-//           this.price += 1;
-//       case ("Anchovies"):
-//           this.price += 1;
-//       case ("Garlic"):
-//           this.price += 2;
-//       case ("Onions"):
-//           this.price += 1;
-//       case ("Mushrooms"):
-//           this.price += 2;
-//       case ("Artichoke Hearts"):
-//           this.price += 3;
-//       default:
-//           return this.price;
-//           break;
-//   }
-// });
+    let inputToppings = [];
+    $.each($("input[name='toppingName']:checked"), function() {
+      inputToppings.push($(this).val());
+    });
+    let userPizza = new Pizza(inputPieSize, inputToppings, 0);
+
+    $("#recTotalPrice").html(userPizza.pizzaPrice());
+    $("#recSize").html(inputPieSize);
+    if (inputPieSize === "Small Pie") {
+      $("#recSizeCost").html(16);
+    } else if (inputPieSize === "Medium Pie") {
+      $("#recSizeCost").html(22);
+    } else {
+      $("#recSizeCost").html(26);
+    }
+    console.log("inputToppings is " + inputToppings);
+    inputToppings.forEach(function(element) {
+      console.log("toppings show loop element is " + element)
+      switch (element) {
+        case ("Pepperoni"):
+          $("#addPeppRec").show();
+        case ("Anchovies"):
+          $("#addAnchRec").show();
+        case ("Garlic"):
+          $("#addGarRec").show();
+        case ("Onions"):
+          $("#addOnionRec").show();
+        case ("Mushrooms"):
+          $("#addMushRec").show();
+        case ("Artichoke Hearts"):
+          $("#addArtRec").show();
+        default:
+          break;
+      }
+    });
+
+  });
+});
