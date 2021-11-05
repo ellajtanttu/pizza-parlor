@@ -7,111 +7,121 @@
   <script src="js/jquery-3.6.0.js"></script>
   <script src="js/scripts.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cambay:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Barcode+39+Extended+Text&family=VT323&family=Vast+Shadow&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cambay:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Barcode+39+Extended+Text&family=VT323&family=Vast+Shadow&display=swap"
+    rel="stylesheet">
   <title>Pizza Parlor</title>
 </head>
 
 <body>
-  <div class="container">
+  <div class="jumbotron" id="intro">
+    <h1 id="companyName">'ZZA PDX</h1>
+  </div>
+  <div id="introText">
 
-    <div id="intro">
-      <div id="introText">
-
-        <div class="col-md-7" id="aboutText">
-          <h1>'ZZA PDX</h1>
-          <p>Enjoy authentic, fine Italian cuisine at our two locations in Portland, Oregon. Our chefs prepare all meals,
-            which are made fresh daily. Whether you are dining in or ordering delivery, we guarantee you'll love every
-            bite. And don't forget to BYOB along to enjoy with your meal.</p>
-          <p>Each of our ZZA PDX Restaurants are family owned and operated, and have been for the past 10 years. We've
-            been providing the Willamette Valley with our Italian culinary experience for the past 30 years.</p>
-        </div>
-      </div>
+    <div class="col-md-7" id="aboutText">
+      <img id="pizzaIcon" alt="pizza icon"
+        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.flaticon.com%2Ficons%2Fpng%2F512%2F80%2F80273.png&f=1&nofb=1">
+      <p>Enjoy authentic, fine Italian cuisine at our two locations in Portland, Oregon. Our chefs prepare all meals,
+        which are made fresh daily. Whether you are dining in or ordering delivery, we guarantee you'll love every
+        bite. And don't forget to BYOB along to enjoy with your meal.</p>
+      <p>Each of our ZZA PDX Restaurants are family owned and operated, and have been for the past 10 years. We've
+        been providing the Willamette Valley with our Italian culinary experience for the past 30 years.</p>
     </div>
+  </div>
+
+  <div class="container" id="orderContainer">
     <div class="col-md-7" id="choices">
 
       <form id="orderForm">
         <div class="row">
 
-        <div class="col-md-6" id="sizesFields">
-          <h4>Pick your pie size:</h4>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="smallRadio" value="Small Pie">
-            <label class="form-check-label" for="smallRadio">Small Pie (11" Diameter)</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="mediumRadio" value="Medium Pie">
-            <label class="form-check-label" for="mediumRadio">Medium Pie (16" Diameter)</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="LargeRadio" value="Large Pie">
-            <label class="form-check-label" for="LargeRadio">Large Pie (21" Diameter)</label>
-          </div>
-        </div>
-
-        <div class="col-md-6" id="toppingsFields">
-          <h4>Pick your toppings:</h4>
-          <div class="form-group">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" value="Pepperoni" id="peppCheck" name="toppingName">
-            <label class="form-check-label" for="peppCheck">
-              Pepperoni
-            </label>
+          <div class="col-md-6" id="sizesFields">
+            <h4>Pick your pie size:</h4>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="smallRadio" value="Small Pie">
+              <label class="form-check-label" for="smallRadio">Small Pie (11" Diameter)</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="mediumRadio"
+                value="Medium Pie">
+              <label class="form-check-label" for="mediumRadio">Medium Pie (16" Diameter)</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="LargeRadio" value="Large Pie">
+              <label class="form-check-label" for="LargeRadio">Large Pie (21" Diameter)</label>
+            </div>
           </div>
 
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" value="Anchovies" id="anchovyCheck" name="toppingName">
-            <label class="form-check-label" for="anchovyCheck">
-              Anchovies
-            </label>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" value="Garlic" id="garlicCheck" name="toppingName">
-            <label class="form-check-label" for="garlicCheck">
-              Garlic
-            </label>
-          </div>
+          <div class="col-md-6" id="toppingsFields">
+            <h4>Pick your toppings:</h4>
+            <div class="form-group">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" value="Pepperoni" id="peppCheck" name="toppingName">
+                <label class="form-check-label" for="peppCheck">
+                  Pepperoni
+                </label>
+              </div>
 
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" value="Onions" id="onionCheck" name="toppingName">
-            <label class="form-check-label" for="onionCheck">
-              Onions
-            </label>
-          </div>
-        </div>
-          <div class="form-group">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" value="Mushrooms" id="mushCheck" name="toppingName">
-            <label class="form-check-label" for="mushCheck">
-              Mushrooms
-            </label>
-          </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" value="Anchovies" id="anchovyCheck" name="toppingName">
+                <label class="form-check-label" for="anchovyCheck">
+                  Anchovies
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" value="Garlic" id="garlicCheck" name="toppingName">
+                <label class="form-check-label" for="garlicCheck">
+                  Garlic
+                </label>
+              </div>
 
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" value="Artichoke Hearts" id="artCheck" name="toppingName">
-            <label class="form-check-label" for="artCheck">
-              Artichoke Hearts
-            </label>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" value="Onions" id="onionCheck" name="toppingName">
+                <label class="form-check-label" for="onionCheck">
+                  Onions
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" value="Mushrooms" id="mushCheck" name="toppingName">
+                <label class="form-check-label" for="mushCheck">
+                  Mushrooms
+                </label>
+              </div>
+
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" value="Artichoke Hearts" id="artCheck"
+                  name="toppingName">
+                <label class="form-check-label" for="artCheck">
+                  Artichoke Hearts
+                </label>
+              </div>
+            </div>
           </div>
         </div>
-        </div>
-      </div>
         <button type="submit" class="btn btn-primary btn-block">Place Order</button>
       </form>
 
     </div>
+  </div>
+  <div class="jumbotron" id="receiptContainer">
+
     <div class="col-lg-4" id="receipt">
       <div class="textArea">
         <div id="businessInfo">
-          <p>Thanks for Ordering From</p>
+          <h5>Thanks for Ordering From</h5>
           <h2>'ZZA PDX</h2>
           <p><em>family owned and operated!</em></p>
         </div>
         <div id="itemizedSelections">
           <p>Base Option:</br>
-          <span id="recSize"> </span> ..... $<span id="recSizeCost"></span>.00</p>
+            <span id="recSize"> </span> ..... $<span id="recSizeCost"></span>.00
+          </p>
           <p>-----</p>
           <p id="addPeppRec">Add Pepperoni ..... $1.00</p>
           <p id="addAnchRec">Add Anchovies ..... $1.00</p>

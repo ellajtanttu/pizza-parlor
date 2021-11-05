@@ -80,7 +80,7 @@ Pizza.prototype.pizzaPrice = function() {
 $(document).ready(function() {
   $("#orderForm").submit(function(event) {
     event.preventDefault();
-    $("#receipt").show();
+    $("#receiptContainer").show();
     const inputPieSize = $("input:radio[name=inlineRadioOptions]:checked").val();
     console.log("inputPieSize is " + inputPieSize);
 

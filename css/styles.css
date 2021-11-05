@@ -8,11 +8,11 @@ Receipt Font:
 font-family: 'VT323', monospace; */
 
 body {
-  background-color: rgb(199, 199, 199);
-  background-image: url("https://images.unsplash.com/photo-1615800098779-1be32e60cca3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1910&q=80");
+  /* background-color: rgb(199, 199, 199); */
+  /* background-image: url("https://images.unsplash.com/photo-1615800098779-1be32e60cca3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1910&q=80");
   background-repeat: no-repeat;
   background-size: 100vw;
-  background-attachment: fixed;
+  background-attachment: fixed; */
   background-position: bottom;
   font-family: 'Cambay', sans-serif;
 }
@@ -20,6 +20,7 @@ body {
 h1 {
   font-family: 'Vast Shadow', cursive;
   font-size: 8em;
+  color: white;
 }
 
 h2 {
@@ -31,15 +32,29 @@ button {
   margin-top: 15px;
 }
 
-.container {
+.orderContainer {
   margin-top: 45px;
   margin-bottom: 45px;
 }
 
+#intro {
+  background-color: rgb(199, 199, 199);
+  background-image: url("https://images.unsplash.com/photo-1579751626657-72bc17010498?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2768&q=80");
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  background-position: center;
+  text-align: center;
+  height: 35vh;
+  /* background-attachment: fixed; */
+  /* background-position: bottom; */
+}
+
+
 #aboutText {
   margin: auto;
   text-align: center;
-  margin-bottom: 45px;
+  margin-top: 15vh;
+  margin-bottom: 15vh;
 }
 
 #choices {
@@ -52,8 +67,18 @@ button {
 #sizesFields {
   line-height: 180%;
 }
-#receipt {
+
+#receiptContainer {
   display: none;
+  background-color: rgb(199, 199, 199);
+  background-image: url("https://images.unsplash.com/photo-1549859455-746ef4fae03b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2971&q=80");
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  background-position: center;
+  width: 100vw;
+}
+
+#receipt {
   margin: auto;
   text-align: center;
   font-family: 'VT323', monospace;
@@ -61,8 +86,8 @@ button {
   background-color: white;
   padding-top: 35px;
   padding-bottom: 35px;
-  border-top: 3px dotted white;
-  border-bottom: 3px dotted white;
+  border-top: 3px dotted rgb(48, 35, 23);
+  border-bottom: 3px dotted rgb(48, 35, 23);
   border-color: rgb(231, 231, 231);
   margin-top: 45px;
 }
@@ -78,4 +103,13 @@ button {
 
 #addPeppRec, #addAnchRec, #addGarRec, #addOnionRec, #addMushRec, #addArtRec {
   display: none;
+}
+
+#companyName {
+  margin: auto;
+}
+
+#pizzaIcon {
+  max-width: 45px;
+  margin-bottom: 55px;
 }
