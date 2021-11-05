@@ -1,13 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/jquery-3.6.0.js"></script>
   <script src="js/scripts.js"></script>
-  <title>PLACEHOLDER</title>
+  <title>Pizza Parlor</title>
 </head>
+
 <body>
-  
+  <div class="container">
+
+    <div id="intro">
+      <div id="introText">
+        <h1>'ZZA PDX</h1>
+        <p>Enjoy authentic, fine Italian cuisine at our two locations in Portland, Oregon. Our chefs prepare all meals,
+          which are made fresh daily. Whether you are dining in or ordering delivery, we guarantee you'll love every
+          bite. And don't forget to BYOB along to enjoy with your meal.</p>
+        <p>Each of our ZZA PDX Restaurants are family owned and operated, and have been for the past 10 years. We've
+          been providing the Willamette Valley with our Italian culinary experience for the past 30 years.</p>
+      </div>
+    </div>
+    <div id="choices">
+
+      <form id="orderForm">
+
+        <div id="sizesFields">
+          <h4>Pick your pie size:</h4>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="smallRadio" value="Small Pie">
+            <label class="form-check-label" for="smallRadio">Small Pie (11" Diameter)</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="mediumRadio" value="Medium Pie">
+            <label class="form-check-label" for="mediumRadio">Medium Pie (16" Diameter)</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="LargeRadio" value="Large Pie">
+            <label class="form-check-label" for="LargeRadio">Large Pie (21" Diameter)</label>
+          </div>
+        </div>
+
+        <div id="toppingsFields">
+          <h4>Pick your toppings:</h4>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Pepperoni" id="peppCheck">
+            <label class="form-check-label" for="peppCheck">
+              Pepperoni
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Anchovies" id="anchovyCheck">
+            <label class="form-check-label" for="anchovyCheck">
+              Anchovies
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Garlic" id="garlicCheck">
+            <label class="form-check-label" for="garlicCheck">
+              Garlic
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Onions" id="onionCheck">
+            <label class="form-check-label" for="onionCheck">
+              Onions
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Mushrooms" id="mushCheck">
+            <label class="form-check-label" for="mushCheck">
+              Mushrooms
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Artichoke Hearts" id="artCheck">
+            <label class="form-check-label" for="artCheck">
+              Artichoke Hearts
+            </label>
+          </div>
+
+        </div>
+        <button type="submit" class="btn btn-primary">Place Order</button>
+      </form>
+
+    </div>
+    <div id="receipt">
+      <div class="textArea">
+        <div id="businessInfo">
+          <p>Thanks for Ordering From</p>
+          <h3>'ZZA PDX</h3>
+          <p><em>family owned and operated!</em></p>
+        </div>
+        <div id="itemizedSelections">
+          <p>Base Option: <span id="recSize"> </span> ..... $<span id="recSizeCost"></span>.00</p>
+          <p id="addPeppRec">Add Pepperoni ..... $1.00</p>
+          <p id="addAnchRec">Add Anchovies ..... $1.00</p>
+          <p id="addGarRec">Add Garlic ..... $2.00</p>
+          <p id="addOnionRec">Add Onions ..... $1.00</p>
+          <p id="addMushRec">Add Mushrooms ..... $2.00</p>
+          <p id="addArtRec">Add Artichoke ..... $3.00</p>
+        </div>
+        <div id="totalSection">
+          <p>Total:
+          <h3><span id="recTotalPrice"></span></h3>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </body>
+
 </html>
