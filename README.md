@@ -162,15 +162,16 @@ Order of events:
 
       < Pizza {size: undefined, toppings: undefined, price: undefined}
 
-<!-- ---
+---
 ### **_Describe: Pizza.prototype.pizzaPrice()_**
 ---
-  _Test:_ "It should return a pizza object when a new pizza variable is created."\
+  _Test:_ "It should return Pizza.price of 0 when pizzaPrice() is run on a Pizza object."\
   _Code:_
 
       let testPizza = new Pizza();
-      testPizza;
+      testPizza.pizzaPrice();
+      testPizza.price;
 
   _Expected Result:_
 
-      < Pizza {size: undefined, toppings: undefined} -->
+      < 0
