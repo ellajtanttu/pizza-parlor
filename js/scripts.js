@@ -6,7 +6,7 @@ function Pizza(size, toppings, price) {
   this.price = price;
 }
 
-Pizza.prototype.pizzaPrice = function() {
+Pizza.prototype.pizzaPrice = function () {
   this.price = 0;
   if (this.size === "Small Pie") {
     this.price += 16;
@@ -17,10 +17,9 @@ Pizza.prototype.pizzaPrice = function() {
   }
 
   console.log("Pre loop: this.price is " + this.price);
-    let toppingPrice = 0;
+  let toppingPrice = 0;
 
-    this.toppings.forEach(function(topping) {
-
+  this.toppings.forEach(function (topping) {
     if (topping === "Pepperoni") {
       toppingPrice += 1;
       console.log("Pepp: Topping price is " + toppingPrice);
@@ -40,24 +39,25 @@ Pizza.prototype.pizzaPrice = function() {
       toppingPrice += 3;
       console.log("ArtHearts: Topping price is " + toppingPrice);
     }
-
   });
 
-  return this.price += toppingPrice;
-}
+  return (this.price += toppingPrice);
+};
 
 // User Interface Logic:
 
-$(document).ready(function() {
-  $("#orderForm").submit(function(event) {
+$(document).ready(function () {
+  $("#orderForm").submit(function (event) {
     event.preventDefault();
-    const inputPieSize = $("input:radio[name=inlineRadioOptions]:checked").val();
+    const inputPieSize = $(
+      "input:radio[name=inlineRadioOptions]:checked"
+    ).val();
     let inputToppings = [];
     let userPizza = new Pizza(inputPieSize, inputToppings, 0);
     if (inputPieSize !== undefined) {
       $("#oops").hide();
       $("#receiptContainer").show();
-      $.each($("input[name='toppingName']:checked"), function() {
+      $.each($("input[name='toppingName']:checked"), function () {
         inputToppings.push($(this).val());
       });
 
@@ -70,8 +70,7 @@ $(document).ready(function() {
       } else {
         $("#recSizeCost").html(26);
       }
-      inputToppings.forEach(function(element) {
-
+      inputToppings.forEach(function (element) {
         if (element === "Pepperoni") {
           $("#addPeppRec").show();
         } else if (element === "Anchovies") {
@@ -86,16 +85,13 @@ $(document).ready(function() {
           $("#addArtRec").show();
         }
       });
-      $("#clearOrder").click(function(event) {
+      $("#clearOrder").click(function (event) {
         event.preventDefault();
         $("#receiptContainer").hide();
-        // $(".list-group").empty();
         document.getElementById("orderForm").reset();
-      })
-
+      });
     } else {
       $("#oops").show();
     }
-
   });
 });

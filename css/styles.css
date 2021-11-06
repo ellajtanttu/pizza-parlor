@@ -1,24 +1,15 @@
-/* Text Font:
-font-family: 'Cambay', sans-serif;
-Barcode:
-font-family: 'Libre Barcode 39 Extended Text', cursive;
-Logo Font:
-font-family: 'Vast Shadow', cursive;
-Receipt Font:
-font-family: 'VT323', monospace; */
-
 body {
-  font-family: 'Cambay', sans-serif;
+  font-family: "Cambay", sans-serif;
 }
 
 h1 {
-  font-family: 'Vast Shadow', cursive;
+  font-family: "Vast Shadow", cursive;
   font-size: 8em;
   color: white;
 }
 
 h2 {
-  font-family: 'Vast Shadow', cursive;
+  font-family: "Vast Shadow", cursive;
   font-size: 4em;
 }
 
@@ -27,13 +18,14 @@ button {
   margin-bottom: 45px;
 }
 
-#orderForm {
-  margin-top: 50px;
-  padding-bottom: 50px;
-}
 .orderContainer {
   padding-top: 45px;
   padding-bottom: 45px;
+}
+
+#orderForm {
+  margin-top: 50px;
+  padding-bottom: 50px;
 }
 
 #intro {
@@ -48,7 +40,6 @@ button {
   box-shadow: 0px 1px 15px rgb(109, 109, 109);
   border-radius: 0px;
 }
-
 
 #aboutText {
   margin: auto;
@@ -85,7 +76,7 @@ button {
 #receipt {
   margin: auto;
   text-align: center;
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   text-transform: uppercase;
   background-color: white;
   padding-top: 35px;
@@ -104,7 +95,12 @@ button {
   width: 50%;
 }
 
-#addPeppRec, #addAnchRec, #addGarRec, #addOnionRec, #addMushRec, #addArtRec {
+#addPeppRec,
+#addAnchRec,
+#addGarRec,
+#addOnionRec,
+#addMushRec,
+#addArtRec {
   display: none;
 }
 
