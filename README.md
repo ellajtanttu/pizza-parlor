@@ -14,11 +14,11 @@
 
 ## Description
 
-_TO BE ADDED UPON COMPLETION_
+_A website for 'ZZA PDX Pizzaria, a local pizzaria with a very simple menu. When a user visits the site, they may place an order by submitting an order form with options for three sizes and six toppings. Once the form has been submitted, a receipt will be printed at the bottom of the page. This receipt shows the prices of each added topping as well as the total price._
 
 ## View Live Application on GH-Pages
 
-_PLACE LINK TO LIVE SITE HERE_
+https://ellajtanttu.github.io/pizza-parlor/
 
 ## Setup & Installation Instructions
 
