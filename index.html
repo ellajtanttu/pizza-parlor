@@ -30,12 +30,16 @@
         been providing the Willamette Valley with our Italian culinary experience for the past 30 years.</p>
     </div>
   </div>
-
+  <!-- <div class="col-md-7" id="sepLine">
+    <p> </p>
+  </div> -->
   <div class="container" id="orderContainer">
     <div class="col-md-7" id="choices">
 
       <form id="orderForm">
+        <h3 id="placeOrderTitle">Place your order</h3>
         <div class="row">
+    
 
           <div class="col-md-6" id="sizesFields">
             <h4>Pick your pie size:</h4>
@@ -104,10 +108,15 @@
             </div>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary btn-block">Place Order</button>
+        <button type="submit" class="btn btn-warning btn-block">Place Order</button>
+        <div id="oops">
+          <h3>Oops!</h3>
+          <p>It looks like you didn't select a pizza size. Please do that before submitting your order again.</p>
+        </div>
       </form>
 
     </div>
+
   </div>
   <div class="jumbotron" id="receiptContainer">
 
@@ -135,9 +144,9 @@
           <h3>$<span id="recTotalPrice"></span>.00</h3>
           </p>
         </div>
+        <button type="click" class="btn btn-dark" id="clearOrder">Clear Order</button>
       </div>
     </div>
-
   </div>
 </body>
 

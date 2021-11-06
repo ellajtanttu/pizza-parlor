@@ -8,12 +8,6 @@ Receipt Font:
 font-family: 'VT323', monospace; */
 
 body {
-  /* background-color: rgb(199, 199, 199); */
-  /* background-image: url("https://images.unsplash.com/photo-1615800098779-1be32e60cca3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1910&q=80");
-  background-repeat: no-repeat;
-  background-size: 100vw;
-  background-attachment: fixed; */
-  background-position: bottom;
   font-family: 'Cambay', sans-serif;
 }
 
@@ -30,11 +24,16 @@ h2 {
 
 button {
   margin-top: 15px;
+  margin-bottom: 45px;
 }
 
+#orderForm {
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
 .orderContainer {
-  margin-top: 45px;
-  margin-bottom: 45px;
+  padding-top: 45px;
+  padding-bottom: 45px;
 }
 
 #intro {
@@ -45,8 +44,9 @@ button {
   background-position: center;
   text-align: center;
   height: 35vh;
-  /* background-attachment: fixed; */
-  /* background-position: bottom; */
+  height: max-content;
+  box-shadow: 0px 1px 15px rgb(109, 109, 109);
+  border-radius: 0px;
 }
 
 
@@ -76,6 +76,10 @@ button {
   background-size: 100vw;
   background-position: center;
   width: 100vw;
+  margin-bottom: 0rem;
+  margin-top: 4rem;
+  box-shadow: 0px 1px 15px rgb(109, 109, 109);
+  border-radius: 0px;
 }
 
 #receipt {
@@ -88,8 +92,7 @@ button {
   padding-bottom: 35px;
   border-top: 3px dotted rgb(48, 35, 23);
   border-bottom: 3px dotted rgb(48, 35, 23);
-  border-color: rgb(231, 231, 231);
-  margin-top: 45px;
+  box-shadow: 0px 1px 15px rgb(0, 0, 0);
 }
 
 #itemizedSelections {
@@ -107,9 +110,25 @@ button {
 
 #companyName {
   margin: auto;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
 }
 
 #pizzaIcon {
   max-width: 45px;
   margin-bottom: 55px;
+}
+
+#placeOrderTitle {
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+#oops {
+  display: none;
+}
+
+#clearOrder {
+  margin: auto;
 }
