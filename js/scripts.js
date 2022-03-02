@@ -16,28 +16,21 @@ Pizza.prototype.pizzaPrice = function () {
     this.price += 26;
   }
 
-  console.log("Pre loop: this.price is " + this.price);
   let toppingPrice = 0;
 
   this.toppings.forEach(function (topping) {
     if (topping === "Pepperoni") {
       toppingPrice += 1;
-      console.log("Pepp: Topping price is " + toppingPrice);
     } else if (topping === "Anchovies") {
       toppingPrice += 1;
-      console.log("Anch: Topping price is " + toppingPrice);
     } else if (topping === "Garlic") {
       toppingPrice += 2;
-      console.log("Garlic: Topping price is " + toppingPrice);
     } else if (topping === "Onions") {
       toppingPrice += 1;
-      console.log("Onions: Topping price is " + toppingPrice);
     } else if (topping === "Mushrooms") {
       toppingPrice += 2;
-      console.log("Mush: Topping price is " + toppingPrice);
     } else {
       toppingPrice += 3;
-      console.log("ArtHearts: Topping price is " + toppingPrice);
     }
   });
 
@@ -81,7 +74,7 @@ $(document).ready(function () {
           $("#addOnionRec").show();
         } else if (element === "Mushrooms") {
           $("#addMushRec").show();
-        } else if (element === "Artichoke Hearts") {
+        } else {
           $("#addArtRec").show();
         }
       });
